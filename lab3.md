@@ -32,7 +32,7 @@ Users:
 2. "User" типа varchar для хранения имени пользователя
 
 Chatrooms:
-1. "id" типа int с автоинкрементом для выдачи уникальных id всем пользователям
+1. "id" типа int с автоинкрементом для выдачи уникальных id всем чатам
 2. "Chat" типа varchar для хранения названия чатов
 
 Messages:
@@ -97,7 +97,7 @@ Messages:
 
 </script>
 ```
-1. Функция вывода сообщений
+2. Функция вывода сообщений
 ```
 $fromUser = $_POST["fromUser"];
 $toChat = $_POST["toChat"];
@@ -121,7 +121,7 @@ $chats = mysqli_query($connect, "SELECT * FROM `messages` WHERE `ToChat` = '$toC
             }
         echo $output;
 ```
-1. Функция загрузки сообщений в базу данных
+3. Функция загрузки сообщений в базу данных
 ```
 <?php
 require_once 'connect.php';
